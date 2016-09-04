@@ -1,0 +1,51 @@
+extends layout.jade
+
+block append head
+  meta(name="theme-color" content="#ff7473")
+  meta(name="apple-mobile-web-app-status-bar-style" content="#ff7473")
+  title About - Max Slobodchikov
+
+block prepend content
+  .container.container-about
+    header
+      h1 
+        a(href="/") Max Slobodchikov
+      hr
+    main
+      h4 Design, Creation &amp; Beauty
+      h2 are my 
+        span.red Passions
+      img(src="/images/about-bg.png", alt="Geometric Background", class="bg")
+      .bg-center
+        span About
+      .hobbies
+        p Learning
+        p Cycling
+        p Football
+        p Travelling
+        p Photography
+        span are my hobbies
+        a(href="http://instagram.com/max.slob", target="_blank")
+          i.fa.fa-instagram
+      .external
+        a(href="https://www.linkedin.com/in/maxslob" target="_blank") 
+          h3 Skills &amp; Exp:
+           strong linkedin
+
+        a(href="https://www.behance.net/maxsslob" target="_blank") 
+          h3 Design portfolio:
+           strong behance
+
+        a(href="/work")  
+          h3 Dev portfolio:
+           strong my work
+    footer
+      nav
+        ul
+          li
+            a(href="/" class="blue") home
+          li
+            em ·
+          li
+            a(href="/contact" class="dark") contact
+      

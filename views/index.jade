@@ -1,0 +1,40 @@
+extends layout.jade
+
+block append head
+  meta(name="theme-color" content="#30A9DE")
+  meta(name="apple-mobile-web-app-status-bar-style" content="#30A9DE")
+  title Max Slobodchikov
+
+block prepend content
+  .container.container-home
+    header
+      h1 
+        a(href="/") Max Slobodchikov
+      hr
+      h2 Digital Designer
+        em ·
+        | Web Developer
+    main
+      img(src="images/me.png", alt="My Photo", class="me")
+      a(href="https://twitter.com/max_slob" target="_blank")
+        i.fa.fa-twitter
+      a(href="https://www.behance.net/maxsslob" target="_blank")
+        i.fa.fa-behance
+      img(src="/images/home-bg.png", alt="Geometric Background", class="bg")
+      a(href="https://codepen.io/maxslob/" target="_blank")
+        i.fa.fa-codepen
+      a(href="https://www.linkedin.com/in/maxslob" target="_blank")
+        i.fa.fa-linkedin
+    footer
+      nav
+        ul
+          li
+            a(href="/about" class="red") about
+          li
+            em ·
+          li
+            a(href="/work" class="yellow") work
+          li
+            em ·
+          li
+            a(href="/contact" class="dark") contact

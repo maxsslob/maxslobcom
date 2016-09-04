@@ -1,0 +1,86 @@
+extends layout.jade
+
+block append head
+  meta(name="theme-color" content="#34314c")
+  meta(name="apple-mobile-web-app-status-bar-style" content="#34314c")
+  title Contact - Max Slobodchikov
+
+block prepend content
+  .container.container-contact
+    header
+      h1 
+        a(href="/") Max Slobodchikov
+      hr
+    main
+      h4 Ask. Invite. Share. Talk. Meet.
+      h2 Let's Connect!
+      img(src="/images/contact-bg.png", alt="Geometric Background", class="bg")
+      .bg-center
+        span Contact
+      .main-title
+        h4 3 OPTIONS
+        h6 choose what's best suit you
+      .options
+        .first
+          .title
+            .num 
+              span 1.
+            .caption
+              h5 Fill out the form
+              span and I'll get back to you asap
+          form(action="" method="")
+            input(type="text" name="name" required placeholder="Your Name")
+            input(type="text" name="email" required pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' placeholder="Your Email")
+            textarea(name="message" required placeholder="Your Message" rows="3")
+            button(type="submit") SUBMIT
+          .divider.divider-fixed
+            span 1
+        .second
+          .title
+            .num 
+              span 2.
+            .caption
+              h5 Send me an email
+              span directly from your favourite app
+          .letter
+            a(href="mailto:maxsslob@gmail.com")
+              img(src="/images/letter.png", alt="Letter Image")
+          .divider
+            span 2
+        .third
+          .title
+            .num 
+              span 3.
+            .caption
+              h5 Reach me
+              span on social websites
+          .social
+            a(href="#" target="_blank")
+              i.fa.fa-twitter
+            a(href="#" target="_blank")
+              i.fa.fa-facebook
+            a(href="#" target="_blank")
+              i.fa.fa-vk
+          .divider
+            span 3
+    footer
+      nav
+        ul
+          li
+            a(href="/" class="blue") home
+          li
+            em ·
+          li
+            a(href="/work" class="yellow") work
+          li
+            em ·
+          li
+            a(href="/about" class="red") about
+      .love Designed &amp; Created with  
+        i.fa.fa-heart &nbsp;
+        br
+        | by Max Slobodchikov
+    script(type='text/javascript').
+      var body = document.getElementById('body');
+      body.style.backgroundColor = '#34314c';
+      

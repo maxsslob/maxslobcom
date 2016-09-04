@@ -1,0 +1,92 @@
+extends layout.jade
+
+block append head
+  meta(name="theme-color" content="#ffc952")
+  meta(name="apple-mobile-web-app-status-bar-style" content="#ffc952")
+  title Work - Max Slobodchikov
+
+block prepend content
+  .container.container-work
+    header
+      h1 
+        a(href="/") Max Slobodchikov
+      hr
+    main
+      h4 That's what I'm
+      h2 
+        span.yellow Proud 
+        | of
+      img(src="/images/work-bg.png", alt="Geometric Background", class="bg")
+      .bg-center
+        span My Work
+  .work-container
+    .project-container
+      .project
+        h4 
+          a(href="#") Vegetarian cafe based in Minsk&nbsp;
+            i.fa.fa-external-link
+        img(src="/images/vegcafe-mockup.png", alt="Vegetarian cafe website's mockup")
+        h6 AUGUST 2016
+        h5 Front-End Project
+    .project-container
+      .project
+        h4 
+          a(href="#") Board of ads sorted in descendent order by paid amout&nbsp;
+            i.fa.fa-external-link
+          
+        img(src="/images/wealthscore.png", alt="Vegetarian cafe website's mockup")
+        h6 JUNE 2016
+        h5 Web App
+    .project-container
+      .project
+        h4 
+          a(href="#") Website designed &amp; built during WorldSkills national contest in 6 hours (won 3rd place)&nbsp;
+            i.fa.fa-external-link
+        img(src="/images/worldskills.png", alt="Vegetarian cafe website's mockup")
+        h6 May 2016
+        h5 Front-End Project
+    .project-container
+      .project
+        h4 
+          a(href="#") #may1reboot Portfolio Update&nbsp;
+            i.fa.fa-external-link
+        img(src="/images/may1reboot.png", alt="Vegetarian cafe website's mockup")
+        h6 APRIL 2016
+        h5 Front-End Project
+    .project-container
+      .project
+        h4 
+          a(href="#") Practiced learned skills by bulding a website about me.&nbsp;
+            i.fa.fa-external-link
+        img(src="/images/1portfolio.png", alt="Vegetarian cafe website's mockup")
+        h6 DECEMBER 2016
+        h5 Front-End Project
+  .work-end
+    .container
+      h2 That's it for now
+      h3 you can also check:
+    .sub-footer
+      .container
+        .left
+          a(href="https://www.behance.net/maxsslob" target="_blank")
+            img(src="/images/sub-l.png", alt="Behance Profile")
+        hr
+        .right
+          a(href="https://codepen.io/maxslob/" target="_blank")
+            img(src="/images/sub-r.png", alt="Codepen Profile")
+
+  .work-footer
+    footer
+      nav
+        ul
+          li
+            a(href="/" class="blue") home
+          li
+            em ·
+          li
+            a(href="/about" class="red") about
+          li
+            em ·
+          li
+            a(href="/contact" class="white") contact
+      
