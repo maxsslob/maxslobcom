@@ -1,0 +1,5 @@
+# robots.txt for http://www.maxslob.com/
+
+User-agent: *
+Disallow: /contactform
+Disallow: /fonts
