@@ -1,0 +1,38 @@
+
+.hero-four
+  .head
+    color:#333333
+    font-size: 30px
+
+    @include media($medium-screen)
+      font-size: 50px
+
+
+  main
+    display: flex
+    justify-content: center
+    align-items: center
+    flex-wrap: wrap
+    padding-bottom: 50px
+    margin: 0 60px
+
+    @include media($medium-screen)
+      margin: 0 60px
+
+    @include media($large-screen)
+      margin: 0 0px
+
+
+    ul
+      .img
+        background: url(http://imgh.us/check65.svg) no-repeat
+        width: 20px
+        height: 20px
+        margin-left: -25px
+        position: relative
+        top: 20px
+
+      li
+        color: black
+        font-size: 115%
+

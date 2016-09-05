@@ -1,0 +1,365 @@
+<div class="contact-container">
+          <div class="left"> 
+            <h3>There are many ways to communicate.</h3>
+            <div class="msg">
+              <span>If you enjoyed all the stuff above, I would like to reseive something from you. It can be anything: message, advice or offer.</span>
+            </div>
+            <div class="field">
+              <div>
+                The best way to contact me is through e-mail.<br>
+                <a class="btn" href="mailto:maxsslob@gmail.com">CLICK TO SEND <i class="fa fa-envelope-o"></i></a>
+              </div>
+            </div>
+            <div class="field">
+              <div>
+                Also you can send me a message through Skype.<br>
+                <a class="btn btn-s" href="skype:slobmax"><i class="fa fa-skype"></i> slobmax</a>
+              </div>
+            </div>
+            <div class="field">
+              <div>
+                Finally, you can communicate with me through:<br>
+                  <ol>
+                    <li><span style="color: blue">TeamSpeak</span></li>
+                    <li><span style="color: #00940C">Hangouts</span></li>
+                    <li><span style="color: #008EBD">Telegram</span></li>
+                    <li><span style="color: #660049">Viber</span></li>
+                    <li><span style="color: #FF230F">Whatewer</span></li>
+                  </ol>
+              </div>
+            </div>
+          </div>
+          <div class="right"> 
+            <h3>Few ways to get more info about me.</h3>
+            <div class="msg">
+              <span>Here is some resources to explore, if you're interested.</span>
+            </div>
+            <div class="field">
+              <div>
+                  First is my GitHub account where you can find the <span style="text-decoration: underline">sourse of that website</span>.<br>
+                <a class="btn" href="https://github.com/maxslob/personal-website"><i class="fa fa-github-alt"></i> GitHub</a>
+              </div>
+            </div>
+            <div class="field">
+              <div>
+                  Sometimes i do amateur photographs on my nexus 5's camera.<br>
+                <a class="btn" href="http://instagram.com/max.slob"><i class="fa fa-camera"></i> Instagram</a>
+              </div>
+            </div>
+            <div class="field">
+              <div>
+                  Check out my codepen profile. There is a bit of my small projects.<br>
+                <a class="btn" href="http://codepen.io/maxslob"><i class="fa fa-codepen"></i> Codepen</a>
+              </div>
+            </div>
+            <div class="field">
+              <div>
+                  Lastly my LinkedIn profile.<br>
+                <a class="btn" href="http://linkedin.com/in/maxslob"><i class="fa fa-linkedin-square"></i> LinkedIn</a>
+              </div>
+            </div>
+          </div>
+          <div class="bottom">
+            <span>Thank you for your time!</span>
+          </div>
+
+
+
+
+
+
+
+
+
+.contact
+
+  .contact-container
+    background-color: rgba(255,255,255, .85)
+    width: 80%
+    margin: 0 auto
+    height: 530px
+
+    .left
+      float: left
+      border-right: 1px solid #333
+
+      .field
+
+        ol
+          list-style-position: inside
+          list-style-type: decimal
+
+    .right
+      float: right
+      border-left: 1px solid #333
+
+      
+
+    h3
+      font-family: Raleway
+      text-align: center
+      margin-top: 15px
+      padding-bottom: 15px
+      box-shadow: 0 2px 0 0 #333
+
+    .bottom
+      float: right
+      width: 100%
+      text-align: center
+      background-color: hsl(350, 100%, 60%)
+      height: 25px
+
+      span
+        color: white
+
+    .left, .right
+      width: 50%
+      height: inherit
+      transition: background-color 0.18s ease-in-out
+
+    .left:hover, .right:hover
+      background-color: rgba(255,255,255, .5)
+
+.msg
+  width: 90%
+  margin: 0 auto
+  color: black
+  text-decoration: none
+  font-weight: bold
+
+.field
+  @extend .msg
+  margin-top: 20px
+  font-weight: 400
+
+.btn
+  display: block
+  margin: 0 auto
+  width: 90%
+  height: 40px
+  border-radius: 10px
+  margin-top: 10px
+  background-color: rgba(0, 0, 0, .5)
+  text-align: center
+  font-size: 24px
+  color: white
+
+.btn:hover
+  box-shadow: 0 0 3px 3px hsla(200, 100%, 50%, .999)
+  color: white
+
+.btn-s
+  @extend .btn
+
+.contact-head
+  font-weight: bold
+  font-size: 40px
+  position: relative
+  top: 10px
+  padding: 0px 0 0px 0
+  display: block
+  width: inherit
+  text-align: center
+  margin: 0 20px
+  margin-bottom: 50px
+  //background-color: rgba(0,0,0,.1)
+
+  @include media($medium-screen)
+    font-size: 60px
+    padding: 0px 0 0px 0
+    top: 10px
+    margin-bottom: 60px
+
+
+@media screen and (min-width: 930px) and (max-width: 1350px)
+  .contact
+
+    .contact-container
+      background-color: rgba(255,255,255, .85)
+      width: 90%
+      margin: 0 auto
+      height: 500px
+
+      .left
+        float: left
+        border-right: 1px solid #333
+
+        .field
+
+          ol
+            list-style-position: inside
+            list-style-type: decimal
+
+      .right
+        float: right
+        border-left: 1px solid #333
+
+        
+
+      h3
+        font-family: Raleway
+        text-align: center
+        margin-top: 15px
+        padding-bottom: 15px
+        box-shadow: 0 2px 0 0 #333
+
+      .bottom
+        float: right
+        width: 100%
+        text-align: center
+        background-color: hsl(350, 100%, 60%)
+        height: 25px
+
+        span
+          color: white
+
+      .left, .right
+        width: 50%
+        height: inherit
+        transition: background-color 0.18s ease-in-out
+
+      .left:hover, .right:hover
+        background-color: rgba(255,255,255, .5)
+
+  .msg
+    width: 90%
+    margin: 0 auto
+    color: black
+    text-decoration: none
+    font-weight: bold
+
+@media screen and (min-width: 870px) and (max-width: 930px)
+  .contact
+
+    .contact-container
+      background-color: rgba(255,255,255, .85)
+      width: 95%
+      margin: 0 auto
+      height: 500px
+
+      .left
+        float: left
+        border-right: 1px solid #333
+
+        .field
+
+          ol
+            list-style-position: inside
+            list-style-type: decimal
+
+      .right
+        float: right
+        border-left: 1px solid #333
+
+        
+
+      h3
+        font-family: Raleway
+        text-align: center
+        margin-top: 15px
+        padding-bottom: 15px
+        box-shadow: 0 2px 0 0 #333
+
+      .bottom
+        float: right
+        width: 100%
+        text-align: center
+        background-color: hsl(350, 100%, 60%)
+        height: 25px
+
+        span
+          color: white
+
+      .left, .right
+        width: 50%
+        height: inherit
+        transition: background-color 0.18s ease-in-out
+
+      .left:hover, .right:hover
+        background-color: rgba(255,255,255, .5)
+
+  .msg
+    width: 90%
+    margin: 0 auto
+    color: black
+    text-decoration: none
+    font-weight: bold
+
+@media screen and (max-width: 870px)
+  .contact
+
+    .contact-container
+      background-color: transparent
+      width: 95%
+      margin: 0 auto
+      height: 500px
+
+      .left
+        width: 90%
+        margin: 0 auto
+        background-color: rgba(255,255,255, .85)
+        float: none
+        border-right: none
+        height: 570px
+
+        &:hover
+          background-color: rgba(255,255,255, .85)
+
+      .right
+        margin: 0px auto
+        margin-top: 60px
+        width: 90%
+        background-color: rgba(255,255,255, .85)
+        float: none
+        border-left: none
+        padding-bottom: 0px
+        height: 550px
+        
+        &:hover
+          background-color: rgba(255,255,255, .85)
+
+      h3
+        margin-top: 15px
+        padding-top: 15px
+
+  .contact
+    padding-bottom: 43em
+
+  .bottom
+    display: none
+
+
+@media screen and (min-width: 630px) and (max-width: 870px)
+
+  .contact-container
+
+    .left
+      height: 570px
+
+    .right
+      height: 550px
+
+
+@media screen and (max-width: 630px)
+  .contact
+    padding-bottom: 52em
+      
+    .contact-container
+
+      .left
+        height: 620px
+
+      .right
+        height: 650px
+
+@media screen and (max-width: 470px)
+  .contact
+    padding-bottom: 60em
+      
+    .contact-container
+
+      .left
+        height: 670px
+
+      .right
+        height: 700px

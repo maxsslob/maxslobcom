@@ -1,0 +1,118 @@
+.hero {  
+  $base-border-radius: 3px !default;
+  $action-color: #477DCA !default;
+  $large-screen: em(860) !default;
+  $hero-color: white;
+  $hero-image: 'http://i.imgur.com/K3bTAsg.jpg';
+  opacity: .95;
+  font-family: Raleway;
+
+  @include background(url($hero-image));
+  background-color: #324766;
+  background-position: top;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  padding-bottom: 5.5em;
+  
+
+  .hero-inner {
+    @include outer-container;
+    @include clearfix;
+    color: $hero-color;
+    margin: auto;
+    padding: 2em;
+    text-align: center;
+
+    .hero-copy {
+      text-align: center;
+      width: 100%;
+      
+      h1 {
+        font-family: Raleway;
+        background-color: rgba(255,255,255,0.5);
+        font-size: 2.2em;
+        line-height: 2em;
+        margin-top: 4em;
+        margin-bottom: 0.5em;
+        margin-right: auto;
+        margin-left: auto;
+        font-weight: bold;
+
+        @include media($large-screen) {
+          font-size: 2em;
+          line-height: 2em;
+          font-weight: 500;
+          width: 45%;
+        }
+      }
+
+      h2 {
+        color: white;
+        font-family: Raleway;
+        background-color: rgba(0,0,0,0.5);
+        font-weight: 300;
+        font-size: 0.9em;
+        line-height: 2em;
+        margin: 0 auto 3em auto; 
+
+        span{
+          text-decoration: underline;
+        }
+
+        @include media($large-screen) {
+          font-size: 1.1em;
+          max-width: 40%;
+          line-height: 2em;
+        }
+      }
+    }
+  }
+}
+
+.hero-second { 
+  $base-border-radius: 3px !default;
+  $action-color: #477DCA !default;
+  $large-screen: em(860) !default;
+  $hero-color: white;
+  //$hero-image-sec: 'http://i.imgur.com/yyfQ41Uh.jpg';
+  $hero-image-sec: 'http://i.imgur.com/JpgGoWH.png';
+  
+
+  opacity: .95;
+
+
+
+  //@include background-image(linear-gradient(135deg,#333333, #09F 50%, #333333));
+  //@include background-image(linear-gradient(135deg,#333333, #09F 50%, #333333));
+  background-color: #efd92b;
+  //@include background(url($hero-image-sec));
+  //background-color: #324766;
+  //background-position: top;
+  //background-repeat: all;
+  //background-attachment: fixed;
+  //background-size: cover;
+  padding-bottom: 3.5em;
+}
+
+.hero-third { 
+  background-color: #FFF;
+  color: black;
+  //@include background-image(linear-gradient(180deg,#333333, hsl(140, 100%, 50%) 50%, #333333));
+  padding-bottom: 5.5em;
+}
+
+.hero-four { 
+    background-color: white;
+  //@include background-image(linear-gradient(135deg,#333333, honeydew 50%, #333333));
+  padding-bottom: 5.5em;
+}
+
+.contact { 
+  //$hero-image333: 'https://static.pexels.com/photos/3367/landmark-bridge-metal-architecture-large.jpg';
+  
+}
+
+.hero-seven{
+  
+}

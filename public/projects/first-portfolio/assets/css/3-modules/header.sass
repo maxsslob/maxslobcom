@@ -1,0 +1,82 @@
+header
+  height: 60px
+
+  .navigation-wrapper
+
+    nav
+      display: flex
+      justify-content: center
+      align-items: center
+      height: 60px
+
+      a:first-of-type
+        margin-right: 20px
+
+      a
+        display: inline-block
+        font-size: 20px
+        color: #333 + 70
+        padding: 5px 10px
+        
+        &:hover, &:active
+          color: black
+
+.header-right
+  position: absolute
+  right: 20px
+  top: 0px
+  height: 60px
+  display: flex
+  justify-content: center
+  align-items: center
+
+  .hidden, .fa-envelope
+    display: block
+    font-size: 18px
+    text-transform: uppercase
+    padding: 5px 10px
+    color: #333
+    background-color: hsl(340,100%,50%)
+    color: white
+    font-weight: bold
+
+    &:hover
+      border: 2px solid hsl(340,100%,50%)
+      background-color: #FFF
+      color: #333
+
+  .fa-envelope
+    display: none
+
+.logo
+  background: url('/logo.svg') 50% 50% no-repeat
+  background-size: contain
+  position: absolute
+  width: 100px
+  height: 60px
+
+
+
+@media screen and (max-width: 660px)
+  .header-right
+
+    .hidden
+      display: none
+
+    .fa-envelope
+      display: inline
+
+  header
+
+    .navigation-wrapper
+
+      nav
+
+        a:first-of-type
+          margin-right: 0px
+
+  .logo
+    width: 70px
+    height: 40px
+    top: 10px
+    left: 10px

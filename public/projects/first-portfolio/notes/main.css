@@ -1,0 +1,302 @@
+@import url(normalize.css);
+* {
+  box-sizing: border-box;
+  font-family: Comfortaa;
+  transition: all 0.1s linear;
+}
+
+body {
+  width: 100%;
+  line-height: 2em;
+  margin: 0;
+  background-image: url("bg.svg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header {
+  position: relative;
+  top: 0px;
+  width: 100%;
+  height: 70px;
+  background-color: white;
+  display: inline-block;
+}
+
+header .logo {
+  float: left;
+  width: 100px;
+  height: 70px;
+  display: inline-block;
+  z-index: 999999999;
+}
+
+header .logo img {
+  display: inline-block;
+  margin: 10px auto;
+  height: 50px;
+  z-index: 9999999999;
+}
+
+header .logo img:hover {
+  -webkit-filter: contrast(300%);
+}
+
+header .title {
+  display: block;
+  height: 70px;
+  vertical-align: middle;
+  width: calc(100% - 180px);
+  margin: 0 auto;
+  float: left;
+  text-align: center;
+  cursor: default;
+}
+
+header .control {
+  display: inline-block;
+  float: right;
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header .control .rotate {
+  transform: rotate(45deg);
+  color: #00a1ff;
+}
+
+header .control i {
+  font-size: 40px;
+  margin-right: 15px;
+}
+
+header .control i:hover {
+  color: #00a1ff;
+  cursor: pointer;
+}
+
+header .control .add-block {
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  right: 0px;
+  top: 68px;
+  width: 25%;
+  background-color: #FFF;
+}
+
+header .control .add-block span {
+  width: 80%;
+  margin: 0 auto;
+  cursor: default;
+}
+
+header .control .add-block input, header .control .add-block textarea {
+  width: 80%;
+  margin: 0 auto;
+}
+
+header .control .add-block .add-button {
+  margin-left: 60%;
+  margin-top: 15px;
+  margin-bottom: 20px;
+  width: 30%;
+}
+
+main .container {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+main .container .note:hover {
+  box-shadow: 0 0 2px 2px black;
+}
+
+main .container .note {
+  margin: 20px 20px;
+  max-width: 30%;
+  word-wrap: break-word;
+  background-color: rgba(255, 255, 255, 0.9);
+  border-radius: 3px;
+}
+
+main .container .note .n-title h2 {
+  margin-left: 10px;
+  margin-right: 10px;
+  padding: 0 25px;
+  padding-bottom: 5px;
+  border-bottom: 3px solid black;
+}
+
+main .container .note .n-title h2 .trash {
+  visibility: hidden;
+  float: right;
+  position: relative;
+  right: -20px;
+  top: 5px;
+  cursor: pointer;
+  opacity: .5;
+}
+
+main .container .note .n-title h2 .trash:hover {
+  opacity: 1;
+}
+
+main .container .note .n-title h2:hover .trash {
+  visibility: visible;
+}
+
+main .container .note .n-text {
+  width: 90%;
+  margin: 0 auto;
+}
+
+footer {
+  position: absolute;
+  bottom: 15px;
+  right: 15px;
+}
+
+footer .info-but {
+  font-size: 40px;
+  color: white;
+}
+
+footer .info-but:hover {
+  color: black;
+  cursor: pointer;
+}
+
+footer .info {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 1px 15px;
+  display: none;
+}
+
+footer .info:hover {
+  box-shadow: 0px 0px 2px 2px black;
+}
+
+footer .info .list-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+footer .info .list-container ul {
+  margin: 15px 20px;
+}
+
+footer .info .list-container ul li {
+  list-style-type: circle;
+}
+
+footer .info .list-container ul:nth-child(1) {
+  padding-right: 75px;
+  margin-left: 0;
+}
+
+footer .info hr {
+  width: 15%;
+}
+
+footer .info .info-close-but {
+  float: right;
+  position: relative;
+  top: 10px;
+  font-size: 30px;
+  opacity: .6;
+}
+
+footer .info .info-close-but:hover {
+  opacity: .9;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 900px) {
+  header .control .add-block {
+    width: 50%;
+  }
+  main .container {
+    width: 90%;
+  }
+  main .container .note {
+    max-width: 50%;
+  }
+  main .container .note .n-text {
+    width: 95%;
+  }
+  footer {
+    position: relative;
+    margin: 0;
+    padding: 0;
+  }
+  footer .info-but {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    float: right;
+    color: rgba(0, 0, 0, 0.9);
+  }
+  footer .info {
+    box-shadow: none;
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    max-width: 80%;
+  }
+  footer .list-container {
+    display: block;
+  }
+  footer .list-container .second-list {
+    padding-right: 75px;
+    margin-left: 0;
+    position: relative;
+    left: -30px;
+  }
+  footer .list-container ul {
+    padding-right: 0px;
+    margin-left: 0;
+  }
+  footer .list-container ul li {
+    list-style-type: circle;
+  }
+  footer hr {
+    width: 15%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  header .control .add-block {
+    width: 70%;
+  }
+  main .container {
+    width: 95%;
+  }
+  main .container .note {
+    max-width: 90%;
+  }
+  main .container .note .n-text {
+    width: 95%;
+  }
+}
+
+.link {
+  text-decoration: none;
+  color: #00a1ff;
+}
+
+.link:hover, .link:active, .link:focus {
+  color: gray;
+}
+
+.notice {
+  text-align: center;
+  opacity: .7;
+}

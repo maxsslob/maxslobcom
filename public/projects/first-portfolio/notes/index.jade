@@ -1,0 +1,55 @@
+html(ng-app="notes")
+    head
+        title Notes App
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        link(rel="stylesheet", type="text/css", href="main.css")
+        link(href='https://fonts.googleapis.com/css?family=Comfortaa', rel='stylesheet', type='text/css')
+        link(rel="stylesheet", type="text/css", href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css")
+    body(ng-controller="mainCtrl as m")
+        header
+            .logo
+                a(href="http://maxslob.website")
+                    img(src="logo.svg", alt="")
+            .title 
+                h3 notes
+            .control
+                i.ion-android-add-circle.add(ng-click="m.isClicked = !m.isClicked;")
+                form.add-block(name="noteForm" ng-hide="m.isClicked" ng-submit="noteForm.$valid && m.addNote(note)")
+                    span Name:
+                    input(type="text" ng-model="m.note.name", required)
+                    span Body:
+                    textarea(type="text" ng-model="m.note.body", required)
+                    button.add-button(type="submit", value="Submit") add
+    
+        main
+            .container
+                .note(ng-repeat="note in m.notes" ng-hide="isDeleted")
+                    notes
+
+        footer
+            i.ion-information-circled.info-but
+            .info
+                i.ion-close.info-close-but
+                h3 About That App
+                blockquote Using this app you can add some notes and delete them.<br> Reload page - notes gone.
+                hr
+                h4 What did I use when creating this app?
+                .list-container
+                    ul.first-list
+                        li Jade for HTML
+                        li Sass for CSS
+                        li Coffee for JS
+                        li Angular.js for logic
+
+                    ul.second-list
+                        li Sublime Text
+                        li Chrome
+                        li Prepros
+                        li Git 
+                            a.link(href="https://github.com/maxslob/personal-website/tree/master/notes", target="_blank") (Code 
+                                i.ion-social-github )
+                h5.notice It just took 2 days to build this website from 0 to that state.
+                
+        script(type="application/javascript", src="https://code.jquery.com/jquery-2.1.4.min.js")
+        script(type="application/javascript", src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js")
+        script(type="application/javascript", src="app.js")

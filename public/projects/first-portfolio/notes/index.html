@@ -1,0 +1,58 @@
+
+<html ng-app="notes">
+  <head>
+    <title>Notes App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
+    <link rel="stylesheet" type="text/css" href="main.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Comfortaa" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" type="text/css" href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css"/>
+  </head>
+  <body ng-controller="mainCtrl as m">
+    <header>
+      <div class="logo"><a href="http://maxslob.website"><img src="logo.svg" alt=""/></a></div>
+      <div class="title"> 
+        <h3>notes</h3>
+      </div>
+      <div class="control"><i ng-click="m.isClicked = !m.isClicked;" class="ion-android-add-circle add"></i>
+        <form name="noteForm" ng-hide="m.isClicked" ng-submit="noteForm.$valid &amp;&amp; m.addNote(note)" class="add-block"><span>Name:</span>
+          <input type="text" ng-model="m.note.name" required="required"/><span>Body:</span>
+          <textarea type="text" ng-model="m.note.body" required="required"></textarea>
+          <button type="submit" value="Submit" class="add-button">add</button>
+        </form>
+      </div>
+    </header>
+    <main>
+      <div class="container">
+        <div ng-repeat="note in m.notes" ng-hide="isDeleted" class="note">
+          <notes></notes>
+        </div>
+      </div>
+    </main>
+    <footer><i class="ion-information-circled info-but"></i>
+      <div class="info"><i class="ion-close info-close-but"></i>
+        <h3>About That App</h3>
+        <blockquote>Using this app you can add some notes and delete them.<br> Reload page - notes gone.</blockquote>
+        <hr/>
+        <h4>What did I use when creating this app?</h4>
+        <div class="list-container">
+          <ul class="first-list">
+            <li>Jade for HTML</li>
+            <li>Sass for CSS</li>
+            <li>Coffee for JS</li>
+            <li>Angular.js for logic</li>
+          </ul>
+          <ul class="second-list">
+            <li>Sublime Text</li>
+            <li>Chrome</li>
+            <li>Prepros</li>
+            <li>Git <a href="https://github.com/maxslob/personal-website/tree/master/notes" target="_blank" class="link">(Code <i class="ion-social-github">)</i></a></li>
+          </ul>
+        </div>
+        <h5 class="notice">It just took 2 days to build this website from 0 to that state.</h5>
+      </div>
+    </footer>
+    <script type="application/javascript" src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script type="application/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+    <script type="application/javascript" src="app.js"></script>
+  </body>
+</html>

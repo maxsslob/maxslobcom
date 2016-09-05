@@ -1,0 +1,94 @@
+.hero-five
+  color: #333333
+  padding-bottom: 3em
+
+  .about-container
+    text-align: center
+    display: flex
+    justify-content: center
+    font-family: Raleway
+    font-size: 15px
+    margin: 0px 30px 20px 30px
+
+    @include media($medium-screen)
+      font-size: 20px
+
+    
+    div
+      span
+        text-decoration: none
+        color: $red
+
+    ul
+
+      li
+        //list-style-type: circle
+        //position:relative
+        //left: 15px
+
+
+
+
+#d2
+  height: 200px
+  width: 200px
+  display: flex
+  justify-content: center
+  align-items: center
+  position: relative
+  bottom: 50px
+  margin: 0 auto
+
+.circ-panel
+  background: url(http://i.imgur.com/C8V5wY3.jpg) 80% 50% no-repeat
+  background-size: cover
+  width: 200px
+  height: 200px
+  border-radius: 100px
+  border: 3px solid
+  -webkit-animation: rainbow 10s infinite linear
+  -moz-animation: rainbow 10s infinite linear
+
+
+@-webkit-keyframes rainbow 
+  0%
+    border:#B83D3D
+  14% 
+    border:#B6C144
+  28%
+    border:#40BF57
+  43%
+    border:#44C1C1
+  57%
+    border:#4046BF
+  72%
+    border:#BC44C1
+  86%
+    border:#BF4097
+  100%
+    border:#B83D3D
+
+
+
+
+
+#about-node
+  font-size: 26px
+  text-align: center
+  display: block
+  margin-bottom: 20px
+
+  a
+    color: $red - 50
+
+  a:hover
+    color: #333333
+
+
+.about-node
+  font-size: 0.8em
+  position: relative
+  bottom: -20px
+  opacity: .8
+  margin-bottom: 5px
+  margin-top: 20px

@@ -1,0 +1,346 @@
+// This is the single file output by sass. It is intended to ONLY @import other files.
+
+// 1 - TOOLS
+@import '1-tools/bourbon/bourbon'
+@import '1-tools/neat/neat'
+@import '1-tools/normalize'
+@import '1-tools/base/base'
+@import '1-tools/fonts'
+@import '1-tools/vars'
+
+
+// 2 - BASICS
+@import '2-basics/body-element'
+@import '2-basics/selection-colors'
+@import '2-basics/links'
+@import '2-basics/typography'
+
+
+// 3 - Modules
+@import '3-modules/header'
+@import '3-modules/hero'
+@import '3-modules/footer'
+@import '3-modules/panel'
+
+// 4 - Pages
+@import  '4-pages/skills'
+@import  '4-pages/gallery'
+@import  '4-pages/border'
+@import  '4-pages/benefit'
+@import  '4-pages/hobbies'
+@import  '4-pages/about'
+@import  '4-pages/contact'
+@import  '4-pages/projects'
+
+
+body::-webkit-scrollbar 
+    width: 0.9em
+
+body::-webkit-scrollbar-track 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3)
+    opacity: .4
+ 
+body::-webkit-scrollbar-thumb 
+  background-color: lighten($blue,20%)
+  opacity: .4
+
+h1, article
+  font-family: roboto
+
+  span
+    text-decoration: underline
+
+
+h1
+  font-weight: 400
+  font-family: roboto, serif
+
+p
+  font-size: 1em
+
+
+
+*
+  box-sizing: border-box
+
+.margin-top
+  margin-top: 30px
+
+.head
+  display: inline-block
+  font-weight: bold
+  font-size: 30px
+  padding: 70px 0
+  padding-bottom: 100px
+  display: block
+  width: inherit
+  text-align: center
+  margin: 0 20px
+
+  @include media($medium-screen)
+    font-size: 50px
+
+  @include media($large-screen)
+
+
+.head2
+  color: #333333
+  display: inline-block
+  font-weight: bold
+  font-size: 30px
+  padding: 70px 0
+  display: block
+  width: inherit
+  text-align: center
+  margin: 0 20px
+  margin-bottom: 0
+  padding-bottom: 0
+
+  @include media($medium-screen)
+    font-size: 50px
+
+.ajax
+  text-align: center
+  padding: 10px
+  //transition: all 0.5s ease
+  //@include background-image(linear-gradient(90deg, $red, white, white, $blue))
+  
+  a
+    color: black
+    cursor: default
+    
+
+  a:hover, a:focus, a:active
+    color: $red
+
+.ajax:hover > a
+    color: $red
+
+
+.isLoading
+  display: none
+  height: 50px
+  width: 50px
+  position: relative
+  left: 48%
+  margin: 0 0 5px 0
+  background: url(/triangle.svg) no-repeat
+
+#CV
+  color: #333
+  text-decoration: underline
+
+#CV:hover, #CV:active, #CV:focus
+  text-decoration: none
+
+.node
+  font-family: Raleway
+  position: fixed
+  width: 100%
+  display: block
+  margin-left: auto
+  margin-right: auto
+  z-index: 94912941294
+  background-color: rgba(0,0,0, .7)
+  bottom: 0px
+
+  section
+    width: 60%
+    margin: 0 auto
+
+  h5
+    font-family: Raleway
+    color: white
+    font-size: 0.97em
+    //font-weight: 400
+    position: relative
+    top: 5px
+
+  h5:nth-child(2)
+    margin-left: 30px
+
+  h5:nth-child(3)
+    margin-left: 60px
+
+  h5
+    span
+      text-decoration: none
+      color: purple + 130
+
+*
+  font-family: Raleway
+
+.close
+  position: fixed
+  bottom: 15px
+  right: 10px
+  font-size: 30px
+  font-weight: bold
+  cursor: pointer
+  text-align: center
+  display: block
+  vertical-align: middle
+  box-shadow: 0 0 0 3px #333
+
+.close:hover
+  background-color: rgba(0,0,0, .7)
+
+.hidden
+  display: none
+
+
+@media screen and (min-width: 1180px) 
+  .node
+    section
+      width: 585px
+      margin: 0 auto
+
+@media screen and (min-width: 990px) and (max-width: 1180px) 
+  .node
+    section
+      width: 80%
+      margin: 0 auto
+
+@media screen and (min-width: 890px) and (max-width: 990px)
+  .node
+    section
+      width: 90%
+      margin: 0 auto
+
+@media screen and (max-width: 890px)
+  .node
+    section
+      width: 100%
+
+
+@media screen and (max-width: 790px)
+  .node
+    section
+      font-size: 0.9em
+
+  .close
+    bottom: 10px
+
+@media screen and (max-width: 712px)
+  .node
+    section
+      width: 85%
+      margin-left: 10px
+
+    h5:nth-child(2)
+      margin-left: 0px
+
+    h5:nth-child(3)
+      margin-left: 0px
+
+    .close
+      right: 5px
+
+.vNav 
+    position: fixed
+    top: 30%
+    left: 90%
+    width: 50px
+    z-index: 9999
+    list-style-type: none
+
+
+.vNav ul 
+    position: relative
+    padding: 3px
+    padding-left: 35%
+
+
+.vNav ul li
+    position: relative
+    padding-bottom: 20px
+    padding-left: 35%
+    color: rgb(113,135,133)
+
+
+.vNav a
+    display: block
+    width: 8px
+    height: 8px
+    text-indent: -9999px
+    border-radius: 50%
+    border: 2px solid
+    border-color: rgb(113,135,133)
+    text-decoration: none
+
+
+.vNav a:hover
+    border-radius: 50%
+    background-color: rgb(113,135,133)
+    text-decoration: none
+
+
+.vNav a.active
+    border-radius: 50%
+    background-color: lighten($blue,20%)
+    text-decoration: none
+
+
+.label
+    position: relative
+    top: -300%
+    left: -400%
+    width: 100%
+    text-align: right
+    font-size: 1.1em
+    color: rgb(113,135,133)
+    display: none
+
+#about
+  position: relative
+  top: -35px
+
+#skills
+  position: relative
+  top: 55px
+
+#hobby
+  position: relative
+  top: 0px
+
+#proj 
+  position: relative
+  top: 20px
+
+#contact
+  position: relative
+  //top: 14px
+
+#loader
+  z-index: 99999999999
+  display:block
+  position:fixed
+  top:0
+  left:0
+  width:100%
+  height:100%
+  background:url(data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz48c3ZnIHdpZHRoPScxMjBweCcgaGVpZ2h0PScxMjBweCcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB2aWV3Qm94PSIwIDAgMTAwIDEwMCIgcHJlc2VydmVBc3BlY3RSYXRpbz0ieE1pZFlNaWQiIGNsYXNzPSJ1aWwtdHJpYW5nbGUiPjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxMDAiIGhlaWdodD0iMTAwIiBmaWxsPSJub25lIiBjbGFzcz0iYmsiPjwvcmVjdD48cGF0aCBkPSJNMzQuNSw1Mi40Yy0wLjgsMS40LTIuMiwxLjQtMywwTDE3LjIsMjcuNkMxNi40LDI2LjIsMTcsMjUsMTguNywyNWgyOC42YzEuNiwwLDIuMywxLjIsMS41LDIuNkwzNC41LDUyLjR6IiBmaWxsPSIjYzBjMGMwIj48YW5pbWF0ZVRyYW5zZm9ybSBhdHRyaWJ1dGVOYW1lPSJ0cmFuc2Zvcm0iIHR5cGU9InJvdGF0ZSIgZnJvbT0iMCAzMyAzNSIgdG89IjEyMCAzMyAzNSIgcmVwZWF0Q291bnQ9ImluZGVmaW5pdGUiIGR1cj0iMXMiPjwvYW5pbWF0ZVRyYW5zZm9ybT48L3BhdGg+PHBhdGggZD0iTTY4LjUsNTIuNGMtMC44LDEuNC0yLjIsMS40LTMsMEw1MS4yLDI3LjZDNTAuNCwyNi4yLDUxLDI1LDUyLjcsMjVoMjguNmMxLjcsMCwyLjMsMS4yLDEuNSwyLjZMNjguNSw1Mi40eiIgZmlsbD0iI2ZmZmZmZiI+PGFuaW1hdGVUcmFuc2Zvcm0gYXR0cmlidXRlTmFtZT0idHJhbnNmb3JtIiB0eXBlPSJyb3RhdGUiIGZyb209IjAgNjcgMzUiIHRvPSIxMjAgNjcgMzUiIHJlcGVhdENvdW50PSJpbmRlZmluaXRlIiBkdXI9IjFzIj48L2FuaW1hdGVUcmFuc2Zvcm0+PC9wYXRoPjxwYXRoIGQ9Ik01MS41LDgyLjRjLTAuOCwxLjQtMi4yLDEuNC0zLDBMMzQuMiw1Ny42QzMzLjQsNTYuMiwzNCw1NSwzNS43LDU1aDI4LjZjMS43LDAsMi4zLDEuMiwxLjUsMi42TDUxLjUsODIuNHoiIGZpbGw9IiMwMDAwMDAiPjxhbmltYXRlVHJhbnNmb3JtIGF0dHJpYnV0ZU5hbWU9InRyYW5zZm9ybSIgdHlwZT0icm90YXRlIiBmcm9tPSIwIDUwIDY1IiB0bz0iMTIwIDUwIDY1IiByZXBlYXRDb3VudD0iaW5kZWZpbml0ZSIgZHVyPSIxcyI+PC9hbmltYXRlVHJhbnNmb3JtPjwvcGF0aD48L3N2Zz4=) 50% 50% no-repeat hsl(190, 100%, 50%)
+
+#new
+  display: block
+  position: fixed
+  bottom: 0
+  color: #333
+  font-size: 1.5em
+  width: 100%
+  text-align: center
+  background-color: #FFF
+  z-index: 999999999
+  box-shadow: 0px -2px 2px 0 #333 + 100
+  a
+    h1
+      font-family: Raleway
+      font-size: 1.7rem
+      color: $blue
+      margin-bottom: 0
+
+#new-but
+  height: 40px
+  margin-bottom: 10px
+  margin-top: 10px
+  font-size: 0.6em

@@ -1,0 +1,6 @@
+.n-title
+	h2 {{note.name}}
+		.trash
+			i.ion-trash-b(ng-click="isDeleted = !isDeleted")
+.n-text
+	blockquote {{note.body}}

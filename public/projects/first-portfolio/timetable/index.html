@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TimeTable App</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<link rel="stylesheet" href="main.css"/>
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/animate.css/3.2.3/animate.min.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- Latest compiled and minified CSS -->
+  <link href='https://fonts.googleapis.com/css?family=Roboto+Slab&subset=latin,cyrillic' rel='stylesheet' type='text/css'>
+  <!-- <link href='https://fonts.googleapis.com/css?family=Kurale&subset=latin,cyrillic' rel='stylesheet' type='text/css'> -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css"><script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/angular.js/1.3.14/angular.min.js"></script>
+</head>
+<body>
+   <header>
+      <div class="logo"><a href="http://maxslob.website"><img src="logo.svg" alt=""/></a></div>
+      <div class="title"> 
+        <h3>расписание занятий</h3>
+      </div>
+    </header>
+<div class="contain" ng-app="TimeTable" ng-controller="MainCtrl as main">
+<table id="First" ng-hide="first">
+  <thead>
+    <td colspan="7" class="week"><span class="animated fadeInDown">Нечетная неделя</td>
+  </thead>
+  <tr>
+      <td id="time"><span>Время</span></td>
+      <td id="week"><span class="animated fadeInLeft">Понедельник</span></td>
+      <td id="week"><span class="animated fadeInLeft">Вторник</span></td>
+      <td id="week"><span class="animated fadeInLeft">Среда</span></td>
+      <td id="week"><span class="animated fadeInLeft">Четверг</span></td>
+      <td id="week"><span class="animated fadeInLeft">Пятница</span></td>
+      <td id="week"><span class="animated fadeInLeft">Суббота</span></td>      
+    </tr>
+  <tbody>
+    <tr>
+      <td colspan="" rowspan="" headers="" class="p1">08:00 - 09:40</td>
+      <td><span class="animated fadeInLeft str1">{{main.lessonsF[0].one}}</span></td>
+      <td><span class="animated fadeInLeft str2">{{main.lessonsF[1].one}}</span></td>
+      <td><span class="animated fadeInLeft str3">{{main.lessonsF[2].one}}</span></td>
+      <td><span class="animated fadeInLeft str4">{{main.lessonsF[3].one}}</span></td>
+      <td><span class="animated fadeInLeft str5">{{main.lessonsF[4].one}}</span></td>
+      <td><span class="animated fadeInLeft str6">{{main.lessonsF[5].one}}</span></td>
+    </tr>
+    <tr>
+      <td colspan="" rowspan="" headers="" class="p2">09:55 - 11:35</td>
+      <td><span class="animated fadeInLeft str1">{{main.lessonsF[0].two}}</span></td>
+      <td><span class="animated fadeInLeft str2">{{main.lessonsF[1].two}}</span></td>
+      <td><span class="animated fadeInLeft str3">{{main.lessonsF[2].two}}</span></td>
+      <td><span class="animated fadeInLeft str4">{{main.lessonsF[3].two}}</span></td>
+      <td><span class="animated fadeInLeft str5">{{main.lessonsF[4].two}}</span></td>
+      <td><span class="animated fadeInLeft str6">{{main.lessonsF[5].two}}</span></td>      
+    </tr>
+    <tr>
+      <td colspan="" rowspan="" headers="" class="p3">12:15 - 13:55</td>
+      <td><span class="animated fadeInLeft str1">{{main.lessonsF[0].three}}</span></td>
+      <td><span class="animated fadeInLeft str2">{{main.lessonsF[1].three}}</span></td>
+      <td><span class="animated fadeInLeft str3">{{main.lessonsF[2].three}}</span></td>
+      <td><span class="animated fadeInLeft str4">{{main.lessonsF[3].three}}</span></td>
+      <td><span class="animated fadeInLeft str5">{{main.lessonsF[4].three}}</span></td>
+      <td><span class="animated fadeInLeft str6">{{main.lessonsF[5].three}}</span></td> 
+    </tr>
+    <tr>
+      <td colspan="" rowspan="" headers="" class="p4">14:10 - 15:50</td>
+      <td><span class="animated fadeInLeft str1">{{main.lessonsF[0].four}}</span></td>
+      <td><span class="animated fadeInLeft str2">{{main.lessonsF[1].four}}</span></td>
+      <td><span class="animated fadeInLeft str3">{{main.lessonsF[2].four}}</span></td>
+      <td><span class="animated fadeInLeft str4">{{main.lessonsF[3].four}}</span></td>
+      <td><span class="animated fadeInLeft str5">{{main.lessonsF[4].four}}</span></td>
+      <td><span class="animated fadeInLeft str6">{{main.lessonsF[5].four}}</span></td> 
+    </tr>
+    <tr>
+      <td colspan="" rowspan="" headers="" class="p5">16:20 - 18:00</td>
+      <td><span class="animated fadeInLeft str1">{{main.lessonsF[0].five}}</span></td>
+      <td><span class="animated fadeInLeft str2">{{main.lessonsF[1].five}}</span></td>
+      <td><span class="animated fadeInLeft str3">{{main.lessonsF[2].five}}</span></td>
+      <td><span class="animated fadeInLeft str4">{{main.lessonsF[3].five}}</span></td>
+      <td><span class="animated fadeInLeft str5">{{main.lessonsF[4].five}}</span></td>
+      <td><span class="animated fadeInLeft str6">{{main.lessonsF[5].five}}</span></td> 
+    </tr>
+  </tbody>
+</table>
+
+<table id="Second" ng-show="second">
+  <thead>
+    <td colspan="7" class="week"><span class="animated fadeInDown">Четная неделя</span></td>
+  </thead>
+  <tr>
+      <td id="time"><span>Время</span></td>
+      <td id="week"><span class="animated fadeInLeft">Понедельник</span></td>
+      <td id="week"><span class="animated fadeInLeft">Вторник</span></td>
+      <td id="week"><span class="animated fadeInLeft">Среда</span></td>
+      <td id="week"><span class="animated fadeInLeft">Четверг</span></td>
+      <td id="week"><span class="animated fadeInLeft">Пятница</span></td>
+      <td id="week"><span class="animated fadeInLeft">Суббота</span></td>       
+  </tr>
+  <tbody>
+    <tr>
+      <td colspan="" rowspan="" headers="" class="p1">08:00 - 09:40</td>
+      <td><span class="animated fadeInLeft str1">{{main.lessonsS[0].one}}</span></td>
+      <td><span class="animated fadeInLeft str2">{{main.lessonsS[1].one}}</span></td>
+      <td><span class="animated fadeInLeft str3">{{main.lessonsS[2].one}}</span></td>
+      <td><span class="animated fadeInLeft str4">{{main.lessonsS[3].one}}</span></td>
+      <td><span class="animated fadeInLeft str5">{{main.lessonsS[4].one}}</span></td>
+      <td><span class="animated fadeInLeft str6">{{main.lessonsS[5].one}}</span></td>  
+    </tr>
+    <tr>
+      <td colspan="" rowspan="" headers="" class="p2">09:55 - 11:35</td>
+      <td><span class="animated fadeInLeft str1">{{main.lessonsS[0].two}}</span></td>
+      <td><span class="animated fadeInLeft str2">{{main.lessonsS[1].two}}</span></td>
+      <td><span class="animated fadeInLeft str3">{{main.lessonsS[2].two}}</span></td>
+      <td><span class="animated fadeInLeft str4">{{main.lessonsS[3].two}}</span></td>
+      <td><span class="animated fadeInLeft str5">{{main.lessonsS[4].two}}</span></td>
+      <td><span class="animated fadeInLeft str6">{{main.lessonsS[5].two}}</span></td> 
+    </tr>
+    <tr>
+      <td colspan="" rowspan="" headers="" class="p3">12:15 - 13:55</td>
+      <td><span class="animated fadeInLeft str1">{{main.lessonsS[0].three}}</span></td>
+      <td><span class="animated fadeInLeft str2">{{main.lessonsS[1].three}}</span></td>
+      <td><span class="animated fadeInLeft str3">{{main.lessonsS[2].three}}</span></td>
+      <td><span class="animated fadeInLeft str4">{{main.lessonsS[3].three}}</span></td>
+      <td><span class="animated fadeInLeft str5">{{main.lessonsS[4].three}}</span></td>
+      <td><span class="animated fadeInLeft str6">{{main.lessonsS[5].three}}</span></td> 
+    </tr>
+    <tr>
+      <td colspan="" rowspan="" headers="" class="p4">14:10 - 15:50</td>
+      <td><span class="animated fadeInLeft str1">{{main.lessonsS[0].four}}</span></td>
+      <td><span class="animated fadeInLeft str2">{{main.lessonsS[1].four}}</span></td>
+      <td><span class="animated fadeInLeft str3">{{main.lessonsS[2].four}}</span></td>
+      <td><span class="animated fadeInLeft str4">{{main.lessonsS[3].four}}</span></td>
+      <td><span class="animated fadeInLeft str5">{{main.lessonsS[4].four}}</span></td>
+      <td><span class="animated fadeInLeft str6">{{main.lessonsS[5].four}}</span></td>       
+    </tr>
+    <tr>
+      <td colspan="" rowspan="" headers="" class="p5">16:20 - 18:00</td>
+      <td><span class="animated fadeInLeft str1">{{main.lessonsS[0].five}}</span></td>
+      <td><span class="animated fadeInLeft str2">{{main.lessonsS[1].five}}</span></td>
+      <td><span class="animated fadeInLeft str3">{{main.lessonsS[2].five}}</span></td>
+      <td><span class="animated fadeInLeft str4">{{main.lessonsS[3].five}}</span></td>
+      <td><span class="animated fadeInLeft str5">{{main.lessonsS[4].five}}</span></td>
+      <td><span class="animated fadeInLeft str6">{{main.lessonsS[5].five}}</span></td>     
+    </tr>
+  </tbody>
+</table>
+<button class="btn btn-md btn-2 animated fadeIn" ng-click="first=!first;second=!second;">Смена недели</button>
+
+
+
+<div class="containe animated fadeIn">   <span class="right">
+      Неделя: 
+    <strong>{{(main.date | date:'ww')-35}}</strong>
+  </span>
+    <span class="left">
+       День: 
+      <strong>{{main.date | date:'EEEE'}}
+      </strong>
+    </span>
+  
+</div>
+  
+</div>
+
+<script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+<script type="text/javascript" src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="app.js"></script>
+
+
+</body>
+</html>
