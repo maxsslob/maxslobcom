@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var nodemailer = require('nodemailer');
 
+
 var routes = require('./routes/index');
 var users = require('./routes/users');
 
@@ -26,33 +27,26 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
+app.post('/contactform', function (req, res) {
+  // setup e-mail data with unicode symbols
+  var transporter = nodemailer.createTransport('smtps://maxsslob%40gmail.com:kqjlhzlxduvyteqs@smtp.gmail.com');
 
-app.post('/contact', function (req, res) {
-  var mailOpts, smtpTrans;
-  //Setup Nodemailer transport, I chose gmail. Create an application-specific password to avoid problems.
-  smtpTrans = nodemailer.createTransport('SMTP', {
-      service: 'Gmail',
-      auth: {
-          user: "maxsslob@gmail.com",
-          pass: "kqjlhzlxduvyteqs" 
-      }
-  });
-  //Mail options
-  mailOpts = {
-      from: req.body.name + ' &lt;' + req.body.email + ' &gt;', //grab form data from the request body object
-      to: 'maxsslob@gmail.com',
-      subject: 'Website contact form',
-      text: req.body.message
+  var mailOptions = {
+      to: 'maxsslob@gmail.com', // list of receivers
+      subject: '✔ New message | maxslob.com | ' + req.body.name + ' | ' + req.body.email, // Subject line
+      html: req.body.message // html body
   };
-  smtpTrans.sendMail(mailOpts, function (error, response) {
-      //Email not sent
-      if (error) {
-          res.render('contact', {msg: 'Error occured, message not sent.', err: true, page: 'contact' })
-      }
-      //Yay!! Email sent
-      else {
-          res.render('contact', {msg: 'Message sent! Thank you.', err: false, page: 'contact' })
-      }
+
+  // send mail with defined transport object
+  transporter.sendMail(mailOptions, function(error, info){
+        if (error) {
+            res.render('contact', { title: 'Contact - Max Slobodchikov', msg: 'Error occured, message not sent.', err: true, page: 'contact' })
+        }
+        //Yay!! Email sent
+        else {
+            res.render('contact', { title: 'Contact - Max Slobodchikov', msg: 'Message sent! Thank you.', err: false, page: 'contact' })
+        }
+      console.log('Message sent: ' + info.response);
   });
 });
 
