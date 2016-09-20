@@ -27,14 +27,14 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', routes);
 app.use('/users', users);
 
-app.post('/contactform', function (req, res) {
+app.post('/contact', function (req, res) {
   // setup e-mail data with unicode symbols
   var transporter = nodemailer.createTransport('smtps://maxsslob%40gmail.com:kqjlhzlxduvyteqs@smtp.gmail.com');
 
   var mailOptions = {
       to: 'maxsslob@gmail.com', // list of receivers
-      subject: '✔ New message | maxslob.com | ' + req.body.name + ' | ' + req.body.email, // Subject line
-      html: req.body.message // html body
+      subject: '✔ New contact | maxslob.com | ' + req.body.email, // Subject line
+      html: "Cool, Huh?" // html body
   };
 
   // send mail with defined transport object

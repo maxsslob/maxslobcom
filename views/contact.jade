@@ -19,17 +19,8 @@ block prepend content
       img(src="/images/contact-bg.svg", alt="Geometric Background", class="bg")
       .bg-center
         span Contact
-      .main-title
-        h4 3 OPTIONS
-        h6 choose what's best suit you
       .options
         .first
-          .title
-            .num 
-              span 1.
-            .caption
-              h5 Fill out the form
-              span and I'll get back to you asap
           style.
             .success{
             text-align: center;
@@ -52,37 +43,19 @@ block prepend content
               position:  relative;
               left: 1px;
             }
-          form(action="/contactform" method="post")
-            input(type="text" name="name" id="name" required placeholder="Your Name")
-            input(type="text" name="email" id="email" required pattern='[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$' placeholder="Your Email")
-            textarea(name="message" id="message" required placeholder="Your Message" rows="3")
+          form(action="/contact" method="post")
+            input(type="email" name="email" id="email" required placeholder="Your Email")
             if(typeof msg !== 'undefined')
               if(!!err)
                 div(class='msgbox err') #{msg}
               else
                 div(class='msgbox success') #{msg}
-            button(type="submit") SUBMIT
-          .divider.divider-fixed
-            span 1
+            button(type="submit") LET'S TALK
         .second
-          .title
-            .num 
-              span 2.
-            .caption
-              h5 Send me an email
-              span directly from your favourite app
           .letter
             a(href="mailto:maxsslob@gmail.com")
               img(src="/images/letter.png", alt="Letter Image")
-          .divider
-            span 2
         .third
-          .title
-            .num 
-              span 3.
-            .caption
-              h5 Reach me
-              span on social websites
           .social
             a(href="https://twitter.com/max_slob" target="_blank")
               i.fa.fa-twitter
@@ -112,4 +85,3 @@ block prepend content
     script(type='text/javascript').
       var body = document.getElementById('body');
       body.style.backgroundColor = '#34314c';
-      
