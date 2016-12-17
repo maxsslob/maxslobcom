@@ -21,28 +21,8 @@ block prepend content
         span Contact
       .options
         .first
-          style.
-            .success{
-            text-align: center;
-            font-family: "NokioBold";
-            margin-top: 15px;
-            font-size: 1.27em;
-            white-space: nowrap;
-            border-bottom: 2px dashed #ccc;
-            }
-            main .options .title .caption{
-            position:  relative;
-            top: 6px !important;
-            }
-            main .options .title .num{
-            position:  relative;
-            top: 1px;
-            }
-
-            main .options .second .title .num span, main .options .third .title .num span{
-              position:  relative;
-              left: 1px;
-            }
+          style .success{ text-align: center; font-family: "NokioBold";margin-top: 15px;font-size: 1.27em;white-space: nowrap;border-bottom: 2px dashed #ccc;}main .options .title .caption{position:  relative;top: 6px !important;
+            }main .options .title .num{position:  relative;top: 1px;}main .options .second .title .num span, main .options .third .title .num span{position:  relative;left: 1px;}
           form(action="/contact" method="post")
             input(type="email" name="email" id="email" required placeholder="Your Email")
             if(typeof msg !== 'undefined')

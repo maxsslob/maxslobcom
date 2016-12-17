@@ -1,6 +1,11 @@
 extends layout
 
 block content
-  h1= message
-  h2= error.status
-  pre #{error.stack}
+  .container(style='text-align: center')
+    h2(style="font-weight: 300") Whoops :(
+    h3(style="font-weight: 500") Something gone wrong here
+    h1(style="text-transform: uppercase; font-weight: 900")= message
+    h1(style="font-weight: 300; font-size: 1em; margin: 0 auto;")= error.status
+    h2 Please start again from 
+      br
+      a(href="/" style="display: inline-block; padding: 4px 12px; border: 1px solid #ccc; margin: 5px 0; background-color: #eee;") HOMEPage
