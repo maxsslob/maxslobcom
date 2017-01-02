@@ -1,0 +1,84 @@
+extends layout.jade
+
+block append head
+  meta(name="theme-color" content="#121212")
+  meta(name="apple-mobile-web-app-status-bar-style" content="#121212")
+  meta(name='description', content="Random Quote with random background image :)")
+  meta(name='og:description', content='Random Quote with random background image :)')
+  title Daily Quote
+  link(href='https://fonts.googleapis.com/css?family=Caveat|Reem+Kufi', rel='stylesheet')
+  style.
+    html, body, img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    font-size: 16px;
+    }
+    #quote-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    }
+    #quote {
+    color: white;
+    font-family: 'Reem Kufi';
+    font-size: 2.9em;
+    width: 500px;
+    text-align: center;
+    }
+    #author {
+    font-family: 'Roboto';
+    color: white;
+    font-size: 1.5em;
+    font-weight: 300;
+    font-family: Caveat;
+    }
+    #author b {
+    font-weight: 900;
+    }
+    @media screen and (max-width: 450px) {
+    body {
+    font-size: 14px;
+    }
+    #quote {
+    width: 95%;
+    margin: 0 auto;
+    }
+    }
+    @media screen and (min-width: 1366px) {
+    body {
+    font-size: 20px;
+    }
+    body #quote {
+    width: 770px;
+    }
+    }
+
+
+block prepend content
+  img(src='https://source.unsplash.com/random/1920x1080')
+  #quote-container
+    #quote
+    #author
+  script(type='text/javascript').
+    function parseQuote(response)
+    {
+    document.getElementById("quote").innerHTML = response.quoteText;
+    document.getElementById("author").innerHTML = 'Author - <b>' + response.quoteAuthor + '</b>';
+    }
+  script(type='text/javascript', src='http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=parseQuote&lang=en')

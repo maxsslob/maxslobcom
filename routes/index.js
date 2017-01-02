@@ -21,6 +21,11 @@ router.get('/contact', function(req, res, next) {
   res.render('contact');
 });
 
+/* GET quote page. */
+router.get('/quote', function(req, res, next) {
+  res.render('quote');
+});
+
 router.get('/contactform', function(req, res, next) {
   res.render('contact');
 });
